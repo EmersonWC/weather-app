@@ -62,3 +62,21 @@ else {
 };
 }
 
+// on form submit
+$("#add-city").on("click", function(event){
+    event.preventDefault();
+
+    // grab city from input box
+    var city = $("#city-input").val().trim();
+
+    // return if submit is blank
+    if (city === "") {
+        return;
+    }
+    // passing city input to the city array
+    cities.push(city);
+    // save new cities in LS, refresh list
+    storeCities();
+    renderCities();
+});
+
