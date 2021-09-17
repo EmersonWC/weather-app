@@ -92,7 +92,18 @@ function getResponseWeather(cityName){
         method: "GET"
     }).then(function(response) {
 
-        
+        // new table row
+        cityTitle = $("<h3>").text(response.name + " "+ FormatDay());
+        $("#today-weather").append(cityTitle);
+        var TempetureToNum = parseInt((response.main.temp)* 9/5 - 459);
+        var cityTemperature = $("<p>").text("Tempeture: "+ TempetureToNum + " °F");
+        $("#today-weather").append(cityTemperature);
+        var cityHumidty = $("<p>").text("Humidity: "+ response.main.humidity + " %");
+        $("#today-weather").append(cityHumidty);
+        var cityWindSpeed = $("<p>").text("Wind Speed: "+ response.wind.speed + " MPH");
+        $("#today-weather").append(cityWindSpeed);
+        var CoordLon = response.coord.lon;
+        var CoordLat = response.coord.lat;
     })
 }
 
