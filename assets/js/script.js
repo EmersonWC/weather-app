@@ -80,3 +80,19 @@ $("#add-city").on("click", function(event){
     renderCities();
 });
 
+// get the response header
+
+function getResponseWeather(cityName){
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+ cityName + "&appid=" + key;
+
+    // empty content for today-weather
+    $("#today-weather").empty();
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+
+        
+    })
+}
+
