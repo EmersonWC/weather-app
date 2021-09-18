@@ -44,7 +44,7 @@ function renderCities() {
     cityList.empty();
 
 for (var i = 0; i < cities.length; i++) {
-    var city = cities[1];
+    var city = cities[i];
 
     var li = $("<li>").text(city);
     li.attr("id", "listC");
@@ -184,3 +184,9 @@ function getResponseWeather(cityName){
     });
 }
 
+
+// click funtion for each li
+$(document).on("click", "#listC", function(){
+    var thisCity = $(this).attr("data-city");
+    getResponseWeather(thisCity);
+});
