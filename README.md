@@ -1,6 +1,8 @@
 # Your task
 build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
+Use the OpenWeather One Call API (Links to an external site.) to retrieve weather data for cities. Read through the documentation for setup and usage instructions. You will use localStorage to store any persistent data.
+
 # User Story
 AS A traveler
 I WANT to see the weather outlook for multiple cities
