@@ -1,4 +1,23 @@
 ion-icon {
-    color: red;
+    color:white;
     --ionicon-stroke-width: 100px;
+}
+
+.green{
+    background-color: green;
+}
+ 
+.yellow{
+    background-color: yellow;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.red{
+    background-color: orangered;
+}
+.purple{
+    background-color: rebeccapurple;
 }
